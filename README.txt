@@ -1,19 +1,21 @@
-ASCEND FITNESS — NUTRITION LABEL TRACKER UPDATE
+ASCEND FITNESS — PWA STARTER
 
-New feature: Add from nutrition label
-- Optionally photograph/upload a package nutrition label as a visual reference.
-- Enter product name, whether the label values are per serving or per 100g/ml, serving size, and amount eaten.
-- Enter calories, protein, carbohydrates and fat printed on the package.
-- ASCEND calculates the actual macros for the amount consumed and adds it to the daily food journal.
-- Save a product label locally for quick reuse; previously saved labels can be selected and serving/amount adjusted.
-- Existing smart food search and manual macro entry remain available.
+Includes:
+- ASCEND branding and system/dark/light theme
+- Onboarding for personal details, goals, manual or estimated nutrition targets, meal time windows
+- Activity routine onboarding: step target, walking routine, sleep target, screen-time limit, selected strength days and running/cardio days
+- Daily habit checklist: clean eating, step target, water target, scheduled strength training, scheduled running/cardio, sleep target, screen-time limit
+- Weighted daily score out of 100. Scheduled strength/run habits are excluded from the denominator on non-training days, so rest days are not penalized.
+- Food journal, macro totals, remaining macros, daily review and improvement suggestions
+- Water intake logging and reminder permission UI
+- Community scoreboard page placeholder
 
-Important:
-- The uploaded label photo is a visual reference only in this version. It does not automatically OCR/read the nutrition panel; type the printed values into the fields and verify them.
-- Per-serving math: label nutrients × amount eaten ÷ serving size.
-- Per-100g/ml math: label nutrients × amount eaten ÷ 100.
-- Values are only as accurate as the label transcription and portion measurement.
-- Saved labels and food logs are stored locally in the browser/device, not synced to a cloud account.
+Scoring weights (editable in future): clean eating 15, steps 15, water 10, strength 20, running/cardio 15, sleep 15, screen time 10. Current prototype has manual habit ticks; automatic verification from Health/Screen Time data is not connected.
 
-To update GitHub Pages:
-Replace index.html, manifest.webmanifest and sw.js in the repository root, commit to main, and wait for deployment. If the installed app shows an older version, close it fully and reopen after deployment; service worker cache version is incremented.
+IMPORTANT:
+- Local-only data. No account system or cross-user sync.
+- The scoreboard is a placeholder, not a real public leaderboard. A secure backend, authentication, consent, anti-cheat rules and privacy controls are required before displaying real users and ranks.
+- Browser notifications are best-effort while app is open. Reliable notifications while closed require a push service and backend scheduler.
+- Food logging uses manually entered macros. Food database, barcode and image recognition are future integrations.
+- Balanced nutrition mode provides estimated starting targets, not medical advice; meal menu generation is a future feature.
+- To install on iPhone, deploy this folder to HTTPS, open in Safari and choose Share > Add to Home Screen.
